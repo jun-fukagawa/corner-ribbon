@@ -1,0 +1,51 @@
+{
+  "name": "tiny-corner-ribbon",
+  "version": "1.0.0",
+  "description": "Add a framework-agnostic corner ribbon to your frontend.",
+  "author": "Jun Fukagawa",
+  "license": "MIT",
+  "keywords": [
+    "tiny-corner-ribbon",
+    "corner-ribbon",
+    "frontend",
+    "label",
+    "ribbon"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./auto": {
+      "types": "./dist/auto.d.ts",
+      "default": "./dist/auto.js"
+    }
+  },
+  "sideEffects": [
+    "./dist/auto.js"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "biome check . && tsc --noEmit",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "prepack": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jun-fukagawa/tiny-corner-ribbon.git"
+  },
+  "packageManager": "pnpm@11.4.0",
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
+    "typescript": "^6.0.3"
+  }
+}
