@@ -137,7 +137,7 @@ export const createCornerRibbon = (options: CornerRibbonOptions = {}): HTMLEleme
     width: '148px',
     height: '148px',
     position: 'fixed',
-    overflow: 'hidden',
+    overflow: 'visible',
     zIndex: String(config.zIndex),
     pointerEvents: 'none',
     ...position.wrapper,
